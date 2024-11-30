@@ -20,7 +20,7 @@ public class Livro {
         System.out.println("Descrição: " + descricao);
         System.out.println("Valor: " + valor);
         System.out.println("ISBN: " + isbn);
-        if(this.autor!=null){
+        if(temAutor()){
             autor.mostraDetalhes();
         }
 
