@@ -5,31 +5,31 @@ public class Main {
     public static void main(String[] args) {
         //Criação de entidade Autor
         Autor autor = new Autor();
-        autor.nome = "Kaunda da Gama";
-        autor.email = "kaundagama@gmail.com";
-        autor.bi = "00123456789";
+        autor.setNome("Kaunda da Gama");
+        autor.setEmail("kaundagama@gmail.com");
+        autor.setBi("00123456789");
 
         //Criação da entidade livro
-        Livro livro= new Livro();
-        livro.nome = "Livro de Java";
-        livro.descricao = "Novos recursos de Java";
-        livro.isbn="978-85-66250-22-0";
-        livro.valor = 49.99;
-        livro.autor = autor; // Atribuindo o autor ao livro.
+        Livro livro= new Livro(autor);
+        livro.setNome("Livro de Java") ;
+        livro.setDescricao("Novos recursos de Java");
+        livro.setIsbn("978-85-66250-22-0");
+        livro.setValor(49.99) ;
+        //livro.autor = autor; // Atribuindo o autor ao livro.
         livro.aplicarDesconto(4.99);
 
         Autor outroAutor = new Autor();
-        outroAutor.nome = "Jonathan Mandombe";
-        outroAutor.email = "jonathanmandob@gmail.com";
-        outroAutor.bi = "00123456788";
+        outroAutor.setNome("Jonathan Mandombe");
+        outroAutor.setEmail("jonathanmandob@gmail.com");
+        outroAutor.setBi("00123456788");
 
         //Criando outro livro com outro autor.
-        Livro outroLivro = new Livro();
-        outroLivro.nome = "Livro de Python";
-        outroLivro.descricao = "Novos recursos de Python";
-        outroLivro.isbn="978-85-66250-11-3";
-        outroLivro.valor = 59.99;
-        outroLivro.autor = outroAutor; // Atribuindo o outro autor ao livro.
+        Livro outroLivro = new Livro(outroAutor);
+        outroLivro.setNome ("Livro de Python");
+        outroLivro.setDescricao("Novos recursos de Python");
+        outroLivro.setIsbn("978-85-66250-11-3");
+        outroLivro.setValor(59.99);
+         // Atribuindo o outro autor ao livro.
 
 
 

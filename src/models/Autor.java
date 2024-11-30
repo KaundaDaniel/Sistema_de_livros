@@ -1,9 +1,34 @@
 package models;
 
 public class Autor {
-    public String nome;
-    public String email;
-    public String bi;
+    private String nome;
+    private String email;
+    private String bi;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getBi() {
+        return bi;
+    }
+
+    public void setBi(String bi) {
+        this.bi = bi;
+    }
+
     public void mostraDetalhes() {
         System.out.println("""
                 Mostra Detalhes do Autor""");
