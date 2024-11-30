@@ -16,6 +16,7 @@ public class Main {
         livro.isbn="978-85-66250-22-0";
         livro.valor = 49.99;
         livro.autor = autor; // Atribuindo o autor ao livro.
+        livro.aplicarDesconto(4.99);
 
         Autor outroAutor = new Autor();
         outroAutor.nome = "Jonathan Mandombe";
