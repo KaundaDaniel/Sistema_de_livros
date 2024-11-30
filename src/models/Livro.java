@@ -56,8 +56,16 @@ public class Livro {
     */
 
 
-    public void aplicarDesconto(double percentagem) {
-        this.valor -= valor * (percentagem/100);
+    public boolean aplicarDesconto(double percentagem) {
+        double calculaPercenta = percentagem/100;
+        if(calculaPercenta>0.3){
+            System.out.println("Desconto excede o limite máximo de 30%!");
+            return false;
+        }else {
+            this.valor -= valor * calculaPercenta;
+            System.out.println("Valor do Livro com desconto: " + valor);
+            return true;
+        }
     }
     public boolean temAutor(){
         return this.autor!= null;
