@@ -1,8 +1,9 @@
 import models.Autor;
 import models.Ebook;
 import models.Livro;
+import models.LivroFisico;
 
-public class Main {
+public class CadastroLivros {
     public static void main(String[] args) {
         //Criação de entidade Autor
         Autor autor = new Autor();
@@ -11,7 +12,7 @@ public class Main {
         autor.setBi("00123456789");
 
         //Criação da entidade livro
-        Livro livro= new Livro(autor);
+        Livro livro= new LivroFisico(autor);
         livro.setNome("Livro de Java") ;
         livro.setDescricao("Novos recursos de Java");
         livro.setIsbn("978-85-66250-22-0");
@@ -42,10 +43,10 @@ public class Main {
         outroAutor.setBi("00123456788");
 
         //Criando outro livro com outro autor.
-        Livro outroLivro = new Livro(outroAutor);
+        Livro outroLivro = new Ebook(outroAutor);
         outroLivro.setNome ("Livro de Python");
         outroLivro.setDescricao("Novos recursos de Python");
-        outroLivro.setIsbn("978-85-66250-11-3");
+        //outroLivro.setIsbn("978-85-66250-11-3");
         outroLivro.setValor(59.99);
         outroLivro.aplicarDesconto(60);
          // Atribuindo o outro autor ao livro.
@@ -53,8 +54,8 @@ public class Main {
 
 
 
-        //livro.mostraDetalhes();// Método que exibe os detalhes do livro.
-        //outroLivro.mostraDetalhes();// Método que exibe os detalhes do outro livro.
+        livro.mostraDetalhes();// Método que exibe os detalhes do livro.
+        outroLivro.mostraDetalhes();// Método que exibe os detalhes do outro livro.
 
     }
 }

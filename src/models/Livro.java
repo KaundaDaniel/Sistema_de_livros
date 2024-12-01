@@ -1,6 +1,6 @@
 package models;
 
-public class Livro {
+public abstract class Livro {
     private String nome;
     private String descricao;
     private double valor;
@@ -56,17 +56,8 @@ public class Livro {
     */
 
 
-    public boolean aplicarDesconto(double percentagem) {
-        double calculaPercenta = percentagem/100;
-        if(calculaPercenta>0.3){
-            System.out.println("Desconto excede o limite máximo de 30%!");
-            return false;
-        }else {
-            this.valor -= valor * calculaPercenta;
-            System.out.println("Valor do Livro com desconto: " + valor);
-            return true;
-        }
-    }
+    public  abstract boolean aplicarDesconto(double percentagem);
+
     public boolean temAutor(){
         return this.autor!= null;
     }

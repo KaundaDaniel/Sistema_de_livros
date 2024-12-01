@@ -1,4 +1,7 @@
-package models;
+import models.Autor;
+import models.CarrinhoCompras;
+import models.Ebook;
+import models.LivroFisico;
 
 public class RegistroVendas {
     public static void main(String[] args) {
