@@ -12,7 +12,7 @@ public class CadastroLivros {
         autor.setBi("00123456789");
 
         //Criação da entidade livro
-        Livro livro= new LivroFisico(autor);
+        LivroFisico livro= new LivroFisico(autor);
         livro.setNome("Livro de Java") ;
         livro.setDescricao("Novos recursos de Java");
         livro.setIsbn("978-85-66250-22-0");
@@ -43,7 +43,7 @@ public class CadastroLivros {
         outroAutor.setBi("00123456788");
 
         //Criando outro livro com outro autor.
-        Livro outroLivro = new Ebook(outroAutor);
+        Ebook outroLivro = new Ebook(outroAutor);
         outroLivro.setNome ("Livro de Python");
         outroLivro.setDescricao("Novos recursos de Python");
         //outroLivro.setIsbn("978-85-66250-11-3");

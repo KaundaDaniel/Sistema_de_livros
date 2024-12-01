@@ -1,6 +1,6 @@
 package models;
 
-public abstract class Livro {
+public abstract class Livro implements Produto{
     private String nome;
     private String descricao;
     private double valor;
@@ -55,8 +55,6 @@ public abstract class Livro {
     }
     */
 
-
-    public  abstract boolean aplicarDesconto(double percentagem);
 
     public boolean temAutor(){
         return this.autor!= null;

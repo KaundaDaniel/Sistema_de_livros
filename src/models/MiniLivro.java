@@ -6,8 +6,5 @@ public class MiniLivro extends Livro{
         super(autor);
     }
 
-    @Override
-    public boolean aplicarDesconto(double percentagem) {
-        return false;
-    }
+
 }

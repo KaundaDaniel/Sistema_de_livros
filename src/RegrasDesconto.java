@@ -17,7 +17,6 @@ public class RegrasDesconto {
         miniLivro.setValor(19.90);
         miniLivro.setNome("Mini Livro");
         miniLivro.setDescricao("Livro Miniatura");
-        miniLivro.aplicarDesconto(20);
 
 
             }
