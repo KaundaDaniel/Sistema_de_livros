@@ -1,5 +1,7 @@
 package models;
 
+import exceptions.AutorNullException;
+
 public abstract class Livro implements Produto{
     private String nome;
     private String descricao;
@@ -7,10 +9,17 @@ public abstract class Livro implements Produto{
     private String isbn;
     private Autor autor;
     public Livro(Autor autor) {
-        this();
-        this.autor = autor;
+        if(autor==null){
+            throw new AutorNullException("O Autor do livro não pode ser nulo!");
+        }else{
+            //this();
+            this.isbn="000-00-00000-00-1";
+            this.autor = autor;
+        }
+
     }
     public Livro() {
+
         this.isbn="000-00-00000-00-0";
     }
 

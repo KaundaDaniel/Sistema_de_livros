@@ -18,6 +18,7 @@ public class RegistroVendas {
         CarrinhoCompras carrinhoCompras= new CarrinhoCompras();
         carrinhoCompras.adiciona(fisico);
         carrinhoCompras.adiciona(ebook);
+        carrinhoCompras.getProds();
 
         System.out.println("O total de livors  comprados é: "+ carrinhoCompras.getTotal());
     }
