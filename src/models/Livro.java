@@ -64,6 +64,11 @@ public abstract class Livro implements Produto{
     }
     */
 
+    public int compareTo(Produto outroProduto){
+        // return (x < y) ? -1 : ((x == y) ? 0 : 1);
+        return (this.getValor()<outroProduto.getValor())? -1 : ((this.getValor()==outroProduto.getValor())?0:1);
+    }
+
 
     public boolean temAutor(){
         return this.autor!= null;

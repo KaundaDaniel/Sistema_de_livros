@@ -27,4 +27,6 @@ public class Ebook extends Livro implements Promocional{
             return true;
         }
     }
+
+
 }

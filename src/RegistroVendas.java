@@ -1,7 +1,6 @@
-import models.Autor;
-import models.CarrinhoCompras;
-import models.Ebook;
-import models.LivroFisico;
+import models.*;
+
+import java.util.List;
 
 public class RegistroVendas {
     public static void main(String[] args) {
@@ -16,10 +15,14 @@ public class RegistroVendas {
         ebook.setValor(29.90);
 
         CarrinhoCompras carrinhoCompras= new CarrinhoCompras();
+        List<Produto>prods=carrinhoCompras.getProds();
+
         carrinhoCompras.adiciona(fisico);
         carrinhoCompras.adiciona(ebook);
-        carrinhoCompras.getProds();
 
-        System.out.println("O total de livors  comprados é: "+ carrinhoCompras.getTotal());
+        for(Produto produto : prods){
+            System.out.println(""+produto.getValor());
+        }
+
     }
 }
